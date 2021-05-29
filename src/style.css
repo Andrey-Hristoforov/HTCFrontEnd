@@ -1,18 +1,68 @@
-.logo
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap');
+
+*
 {
-    display: inline-block;
+    font-family: Rubik, sans-serif;
 }
+
+header
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media (max-width: 500px){
+    header{
+        /* Меняем оси шапки, делая её вертикальной. */
+        flex-direction: column;
+        /* Выравнивание элементов шапки с начала (по левому краю). */
+        align-items: flex-start;
+    }
+}
+
 .sign
 {
-    display: inline-block;
-}
-.search
-{
-    display: inline-block;
-}
-.logIn
-{
+    /*margin: 10px 0px;*/
     display: inline-block;
 }
 
+.search input
+{
+    margin-right: 20px;
 
+    font-size: 16px;
+    color: #828282;
+    height: 28px;
+    border: 1px solid #333333;
+    border-style: none none solid none;
+}
+
+.search button
+{
+    color: red;
+    border-style: none;
+    background-color: transparent;
+}
+
+.logIn button
+{
+    height: 38px;
+    width: 113px;
+
+    color: white;
+    border-style: none;
+    border-radius: 6px;
+    background-color: red;
+}
+
+.sign
+{
+    margin-right: 11px;
+}
+
+.logo label
+{
+    color: #333333;
+    font-size: 20px;
+}
