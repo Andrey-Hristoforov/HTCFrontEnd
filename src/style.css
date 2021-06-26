@@ -84,6 +84,43 @@ header
     margin-right: 9%;
 }
 
+section article.new label
+{
+    font-weight: 500;
+    font-size: 24px;
+}
+
+
+section article.new ul
+{
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+section article.new ul li
+{
+    width: 280px;
+}
+
+section article.new ul img
+{
+    width: inherit;
+}
+
+section article.new ul li img
+{
+    border-radius: 8px;
+}
+section article.new ul li label
+{
+    font-size: 20px;
+    color: #333333;
+    font-weight: 400;
+    display: block;
+}
+
 footer
 {
     background-color: #f2f2f2;
