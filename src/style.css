@@ -102,9 +102,11 @@ section article.new ul
 section article.new ul li
 {
     width: 280px;
+    display: inline-block;
+    position: relative;
 }
 
-section article.new ul img
+section article.new ul img /*????*/
 {
     width: inherit;
 }
@@ -119,6 +121,29 @@ section article.new ul li label
     color: #333333;
     font-weight: 400;
     display: block;
+}
+
+section article.new ul li p
+{
+    color: #f2f2f2;
+    font-size: 16px;
+    font-weight: 400;
+    opacity: 0;
+    width: 90%;
+    left: 5%;
+    right: 5%;
+    top: 1%;
+    display: inline-block;
+    position: absolute;
+}
+
+section article.new ul li:hover img
+{
+    filter: brightness(0.5);
+}
+section article.new ul li:hover p
+{
+    opacity: 1;
 }
 
 footer
