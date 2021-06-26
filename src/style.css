@@ -24,8 +24,13 @@ header
 .sign
 {
     /*margin: 10px 0px;*/
-    display: inline-block;
 }
+
+.logo
+{
+    display: flex;
+}
+
 
 .search input
 {
@@ -34,8 +39,9 @@ header
     font-size: 16px;
     color: #828282;
     height: 28px;
-    border: 1px solid #333333;
-    border-style: none none solid none;
+    width: 320px;
+    border-style: none;
+    border-bottom: 1px solid #333333
 }
 
 .search button
@@ -61,8 +67,18 @@ header
     margin-right: 11px;
 }
 
+
 .logo label
 {
+    display: block;
     color: #333333;
     font-size: 20px;
+
+    margin: auto;
+}
+
+.centerBox
+{
+    margin-left: 9%;
+    margin-right: 9%;
 }
