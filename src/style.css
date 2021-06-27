@@ -146,6 +146,67 @@ section article.new ul li:hover p
     opacity: 1;
 }
 
+section article.genres ul
+{
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+section article.genres li
+{
+    text-align: center;
+    position: relative;
+    width: 280px;
+    height: 208px;
+    opacity: 0.8;
+    background: linear-gradient(127.83deg, #F2C94C 8.44%, #F29A4A 91.36%);
+    box-shadow: inset 0px 0px 16px rgba(0, 0, 0, 0.15);
+    border-radius: 6px;
+}
+
+section article.genres li:hover
+{
+    opacity: 1;
+}
+
+
+section article.genres li label.emoji
+{
+    display: block;
+    margin-top: 23%;
+    font-size: 48px;
+}
+section article.genres li p
+{
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 400;
+
+    display: inline-block;
+    margin-top: 13%;
+}
+
+section article.genres li #0
+{
+    background: linear-gradient(127.83deg, #F2C94C 8.44%, #F29A4A 91.36%);
+}
+section article.genres li #1
+{
+    background: linear-gradient(127.83deg, #F2994A 8.44%, #EB5757 91.36%);
+}
+section article.genres li #2
+{
+    background: linear-gradient(127.83deg, #56CCF2 8.44%, #2F80ED 91.36%);
+}
+section article.genres li #3
+{
+    background: linear-gradient(127.83deg, #828282 8.44%, #333333 91.36%);
+}
+
+
+
 footer
 {
     background-color: #f2f2f2;
