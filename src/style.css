@@ -8,10 +8,12 @@
 body
 {
     margin: 0;
+    padding: 0;
 }
 
 header
 {
+    margin-top: 34px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -68,8 +70,14 @@ header
     color: white;
     border-style: none;
     border-radius: 6px;
-    background-color: red;
+    background-color: #E5261E;
 }
+
+.logIn button:hover
+{
+    background-color: #CC221B;
+}
+
 
 .sign
 {
@@ -91,10 +99,12 @@ header
     margin-left: auto;
     margin-right: auto;
     max-width: 1180px;
+    height: 5%;
 }
 
 nav
 {
+    margin-top: 36px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -123,6 +133,7 @@ nav div.navRadioButton label:hover
 {
     /*color: #e5261e;*/
     /*border-bottom: 2px solid #e5261e*/
+    cursor: pointer;
 }
 
 section article.new label, section article.genres label
@@ -244,9 +255,93 @@ article.genres li.fourthGenre
     background: linear-gradient(127.83deg, #828282 8.44%, #333333 91.36%);
 }
 
+ul.programList
+{
+    padding: 0;
+}
+
+ul.programList li.programListItem
+{
+    display: flex;
+    background-color: #f2f2f2;
+    height: 162px;
+    border-radius: 8px;
+    margin-bottom: 16px;
+}
+
+ul.programList li.programListItem  div.programListItemInfo
+{
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 65%;
+}
+
+ul.programList li.programListItem img
+{
+    height: 49px;
+    margin: auto;
+}
+
+ul.programList li.programListItem ul
+{
+    padding: 0;
+    list-style: none;
+}
+
+ul.programList li.programListItem ul li
+{
+    margin-top: 12px;
+}
+
+ul.programList li.programListItem label.channelName
+{
+    color: #333333;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+ul.programList li.programListItem label.time, ul.programList li.programListItem label.info
+{
+    color: #333333;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+ul.programList li.programListItem ul li:first-child label
+{
+    color: #E5261E;
+}
+
+ul.programList li.programListItem label.time
+{
+    margin-right: 16px;
+    color: #333333;
+}
+
+article.tvProgram
+{
+    height: 518px;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+article.tvProgram::-webkit-scrollbar
+{
+    width: 8px;
+    background-color: #f2f2f2;
+}
+
+article.tvProgram::-webkit-scrollbar-thumb
+{
+    width: 4px;
+    background-color: #bdbdbd;
+    border-radius: 2px;
+}
+
 footer
 {
     background-color: #f2f2f2;
+    bottom: 0;
 }
 
 footer .centerBox
