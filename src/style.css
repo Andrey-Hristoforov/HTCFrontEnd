@@ -5,6 +5,11 @@
     font-family: Rubik, sans-serif;
 }
 
+body
+{
+    margin: 0;
+}
+
 header
 {
     display: flex;
@@ -41,6 +46,9 @@ header
     color: #828282;
     height: 28px;
     width: 320px;
+    /*max-width: 320px;*/
+    /*min-width: 100px;*/
+    /*width: auto;*/
     border-style: none;
     border-bottom: 1px solid #333333
 }
@@ -71,7 +79,7 @@ header
 
 .logo label
 {
-    display: block;
+    /*display: block;*/
     color: #333333;
     font-size: 20px;
 
@@ -80,11 +88,44 @@ header
 
 .centerBox
 {
-    margin-left: 9%;
-    margin-right: 9%;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1180px;
 }
 
-section article.new label
+nav
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav div.navRadioButton
+{
+    font-weight: 500;
+    font-size: 28px;
+    display: inline-block;
+    margin: 12px;
+}
+
+nav div.navRadioButton input[type=radio]
+{
+    display: none;
+}
+
+nav div.navRadioButton input[type=radio]:checked + label
+{
+    color: #e5261e;
+    border-bottom: 2px solid #e5261e
+}
+
+nav div.navRadioButton label:hover
+{
+    /*color: #e5261e;*/
+    /*border-bottom: 2px solid #e5261e*/
+}
+
+section article.new label, section article.genres label
 {
     font-weight: 500;
     font-size: 24px;
@@ -139,6 +180,7 @@ section article.new ul li p
 
 section article.new ul li:hover img
 {
+    cursor: pointer;
     filter: brightness(0.5);
 }
 section article.new ul li:hover p
@@ -154,7 +196,7 @@ section article.genres ul
     justify-content: space-between;
 }
 
-section article.genres li
+article.genres li
 {
     text-align: center;
     position: relative;
@@ -168,6 +210,7 @@ section article.genres li
 
 section article.genres li:hover
 {
+    cursor: pointer;
     opacity: 1;
 }
 
@@ -188,24 +231,18 @@ section article.genres li p
     margin-top: 13%;
 }
 
-section article.genres li #0
-{
-    background: linear-gradient(127.83deg, #F2C94C 8.44%, #F29A4A 91.36%);
-}
-section article.genres li #1
+article.genres li.secondGenre
 {
     background: linear-gradient(127.83deg, #F2994A 8.44%, #EB5757 91.36%);
 }
-section article.genres li #2
+article.genres li.thirdGenre
 {
     background: linear-gradient(127.83deg, #56CCF2 8.44%, #2F80ED 91.36%);
 }
-section article.genres li #3
+article.genres li.fourthGenre
 {
     background: linear-gradient(127.83deg, #828282 8.44%, #333333 91.36%);
 }
-
-
 
 footer
 {
