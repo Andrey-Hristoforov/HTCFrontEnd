@@ -24,8 +24,12 @@
             <input type="text" value="Поиск...">
             <button>Найти</button>
         </div>
-        <div class = "logIn">
-            <button>Войти</button>
+        <div class = "logIn" id = "LogInDiv">
+            <button href="#loginFormId" id="loginButtonHeader">Войти</button>
+        </div>
+        <div class = "LogOut" id = "LogOutDiv">
+            <label>test</label>
+            <button id = "LogOutButton">Выйти</button>
         </div>
     </header>
     <nav>
@@ -134,6 +138,16 @@
             </ul>
         </article>
     </section>
+    <form action="trololo.php" class="loginForm" id="loginFormId">
+        <h1>Вход</h1>
+        <input type="text" value="Логин" id="loginInput">
+        <input type="text" value="Пароль" id="passwordInput">
+        <div>
+            <input type="checkbox" id="rememberMe">
+            <label for="rememberMe">Запомнить</label>
+        </div>
+        <input type="button" value="Войти" id="loginFormSubmitButton">
+    </form>
 
 </div>
 <footer>
@@ -152,5 +166,7 @@
         </div>
     </div>
 </footer>
+<div class="shadow" id = "shadowDiv"></div>
+<script src="src/script.js"></script>
 </body>
 </html>

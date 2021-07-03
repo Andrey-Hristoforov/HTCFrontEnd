@@ -9,6 +9,7 @@ body
 {
     margin: 0;
     padding: 0;
+    z-index: 0;
 }
 
 header
@@ -76,6 +77,22 @@ header
 .logIn button:hover
 {
     background-color: #CC221B;
+}
+
+.LogOut label
+{
+    font-weight: 500;
+    font-size: 16px;
+    color: #333333;
+    margin-right: 16px;
+}
+.LogOut button
+{
+    font-weight: 500;
+    font-size: 16px;
+    color: #E5261E;
+    border-style: none;
+    background: none;
 }
 
 
@@ -371,6 +388,113 @@ footer .contacts a
     font-weight: 500;
     color: #1f4766;
     text-decoration: none;
+}
+
+form.loginForm
+{
+    width: 304px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: absolute;
+    top: 35%;
+    left: 40%;
+
+    align-items: center;
+
+    z-index: 2;
+}
+
+form.loginForm h1
+{
+    color: #333333;
+    font-weight: 500;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 24px;
+    font-size: 28px;
+}
+
+form.loginForm input[type = 'text']
+{
+    min-width: 232px;
+
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 24px;
+    color: #828282;
+    font-weight: 400;
+    font-size: 16px;
+    border-style: none;
+    border-bottom: 1px solid #333333;
+}
+
+form.loginForm div
+{
+    width: 232px;
+    margin-bottom: 111px;
+}
+
+form.loginForm div input[type = 'checkbox']
+{
+    margin-left: 0;
+}
+
+
+
+form.loginForm label
+{
+    font-weight: 400;
+    font-size: 16px;
+    color: #333333;
+    display: inline-block;
+}
+
+form.loginForm input[type = "button"]
+{
+    height: 38px;
+    width: 113px;
+
+    color: white;
+    border-style: none;
+    border-radius: 6px;
+    background-color: #E5261E;
+
+    margin-bottom: 36px;
+}
+
+form.loginForm input[type = "button"]:hover
+{
+    background-color: #CC221B;
+}
+.logIn button
+{
+    height: 38px;
+    width: 113px;
+
+    color: white;
+    border-style: none;
+    border-radius: 6px;
+    background-color: #E5261E;
+}
+
+.logIn button:hover
+{
+    background-color: #CC221B;
+}
+
+.shadow
+{
+    z-index: 1;
+    position: absolute;
+    top:0;
+    left: 0;
+    height: 10000000000000000000vh;
+    width: 100%;
+    opacity: 0.5;
+    background-color: #333333;
 }
 
 
