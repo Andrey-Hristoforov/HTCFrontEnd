@@ -23,8 +23,37 @@ const loginButtonHeader = document.getElementById('loginButtonHeader');
 
 const loginInput = document.getElementById('loginInput');
 
-
 const passwordInput = document.getElementById('passwordInput');
+
+const tabs = document.getElementById("tabs");
+
+const filmsTab = tabs.children[0];
+const tvProgramTab = tabs.children[1];
+
+function OnFilmsTabClick ()
+{
+    let tvArticle = document.getElementsByClassName("tvProgram")[0];
+    tvArticle.style.display = "none";
+    let newArticle = document.getElementsByClassName("new")[0];
+    newArticle.style.display = "block";
+    let genresArticle = document.getElementsByClassName("genres")[0];
+    genresArticle.style.display = "block";
+}
+
+function OnTvProgramTabTabClick ()
+{
+    let tvArticle = document.getElementsByClassName("tvProgram")[0];
+    tvArticle.style.display = "block";
+    let newArticle = document.getElementsByClassName("new")[0];
+    newArticle.style.display = "none";
+    let genresArticle = document.getElementsByClassName("genres")[0];
+    genresArticle.style.display = "none";
+}
+
+OnFilmsTabClick();
+
+filmsTab.onclick = OnFilmsTabClick;
+tvProgramTab.onclick = OnTvProgramTabTabClick;
 
 if(localStorage.getItem("login") != null)
 {
