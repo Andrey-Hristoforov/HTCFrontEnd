@@ -3,12 +3,11 @@ console.log("Hey!");
 let Authorised = false;
 
 const shadowDiv = document.getElementById('shadowDiv');
-    shadowDiv.hidden = true;
-
-const header = document.getElementById('loginButtonHeader');
+shadowDiv.hidden = true;
 
 const LogInDiv = document.getElementById('LogInDiv');
 // LogInDiv.hidden = true;
+
 const LogOutDiv = document.getElementById('LogOutDiv');
 LogOutDiv.hidden = true;
 
@@ -23,32 +22,18 @@ const loginButtonHeader = document.getElementById('loginButtonHeader');
     }
 
 const loginInput = document.getElementById('loginInput');
-    loginInput.onblur = (function ()
-    {
-        if(typeof this.value == "undefined" || this.value.length == 0)
-            this.value = "Логин";
-        console.log(")");
-    });
-    loginInput.onfocus = (function ()
-    {
-        if(this.value.length == "Логин")
-            this.value = "";
-        console.log("(");
-    });
+
 
 const passwordInput = document.getElementById('passwordInput');
-    passwordInput.onblur = (function ()
-    {
-        if(typeof this.value == "undefined" || this.value.length == 0)
-            this.value = "Пароль";
-        console.log(")");
-    });
-    passwordInput.onfocus = (function ()
-    {
-        if(this.value.length == "Пароль")
-            this.value = "";
-        console.log("(");
-    });
+
+if(localStorage.getItem("login") != null)
+{
+    LogInDiv.hidden = true;
+    LogOutDiv.hidden = false;
+    LogOutDiv.firstElementChild.innerHTML = localStorage.getItem("login");
+    loginForm.style.display = 'none';
+    shadowDiv.hidden = true;
+}
 
 const loginFormSubmitButton = document.getElementById('loginFormSubmitButton');
 loginFormSubmitButton.onclick = function ()
@@ -60,8 +45,9 @@ loginFormSubmitButton.onclick = function ()
         LogOutDiv.firstElementChild.innerHTML = loginInput.value;
         loginForm.style.display = 'none';
         shadowDiv.hidden = true;
+        localStorage.setItem("login", loginInput.value);
     }
-    console.log('aaaa');
+    console.log(loginInput.value);
 }
 
 const logOutButton = document.getElementById("LogOutButton");
@@ -71,39 +57,31 @@ logOutButton.onclick = function ()
     LogInDiv.hidden = false;
     loginInput.value = "Логин";
     passwordInput.value = "Пароль";
+    localStorage.setItem("login", null);
 }
 
-// const blurDefaultValueFunc = function (defaultValue)
+
+// loginInput.onblur = (function () не работает
 // {
 //     if(typeof this.value == "undefined" || this.value.length == 0)
-//         this.value = defaultValue;
+//         this.value = "Логин";
 //     console.log(")");
-// }
-//
-// const onFocusClear = function (defaultValue)
+// });
+// loginInput.onfocus = (function ()
 // {
-//     if(this.value.length == defaultValue)
+//     if(this.value.length == "Логин")
 //         this.value = "";
 //     console.log("(");
-// }
-
-
-
-
-
-
-
-
-// if(typeof header == null)
-//     console.log('!');
-//
-// if(typeof loginForm == null)
-//     console.log('!');
-//
-// if(typeof loginInput == null)
-//     console.log('!');
-//
-// if(typeof passwordInput == null)
-//     console.log('!');
-// if(typeof loginFormSubmitButton == null)
-//     console.log('!');
+// });
+// passwordInput.onblur = (function ()
+// {
+//     if(typeof this.value == "undefined" || this.value.length == 0)
+//         this.value = "Пароль";
+//     console.log(")");
+// });
+// passwordInput.onfocus = (function ()
+// {
+//     if(this.value.length == "Пароль")
+//         this.value = "";
+//     console.log("(");
+// });
