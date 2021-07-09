@@ -30,6 +30,8 @@ const tabs = document.getElementById("tabs");
 const filmsTab = tabs.children[0];
 const tvProgramTab = tabs.children[1];
 
+const searchButton = document.getElementById('searchButton');
+
 function OnFilmsTabClick ()
 {
     let tvArticle = document.getElementsByClassName("tvProgram")[0];
@@ -54,6 +56,21 @@ OnFilmsTabClick();
 
 filmsTab.onclick = OnFilmsTabClick;
 tvProgramTab.onclick = OnTvProgramTabTabClick;
+
+function Search()
+{
+    let searchQuery = searchButton.previousElementSibling.value;
+    let newArticle = document.getElementsByClassName("new")[0];
+    let filmsList = newArticle.lastElementChild.children;
+    for(let i = 0; i < filmsList.length; i++)
+    {
+        filmsList[i].style.display = "block";
+        if(!filmsList[i].lastElementChild.innerHTML.includes(searchQuery))
+            filmsList[i].style.display = "none";
+    }
+}
+
+searchButton.onclick = Search;
 
 if(localStorage.getItem("login") != null)
 {
