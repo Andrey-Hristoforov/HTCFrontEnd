@@ -65,7 +65,7 @@ function Search()
     for(let i = 0; i < filmsList.length; i++)
     {
         filmsList[i].style.display = "block";
-        if(!filmsList[i].lastElementChild.innerHTML.includes(searchQuery))
+        if(!filmsList[i].lastElementChild.innerHTML.toLowerCase().includes(searchQuery.toLowerCase()))
             filmsList[i].style.display = "none";
     }
 }
